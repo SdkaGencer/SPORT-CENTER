@@ -1,0 +1,103 @@
+section#review{
+    background-color: var(--second-bg-color);
+    position:relative;
+    padding-block: 100px;;
+}
+
+.review-container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    gap:25px;
+    padding:10px 15%;
+}
+
+.review-items-container{
+    display: flex;
+    gap:10%;
+}
+
+.client-container{
+    display:flex;
+
+}
+
+.client-container img{
+    border: 1px solid transparent;
+    border-radius:50%;
+    width:15%;
+    height:auto;
+
+}
+
+.client-container .people{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.client-container .people h6{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.client-container .people p{
+    text-align: start;
+}
+
+div.main-text{
+    text-align: start;
+    border:1px solid var(--main-color);
+    background-color: var(--main-color);
+    color:white;
+    width:400px;
+    height:auto; /***/
+    padding:3%;
+    font-size: 12px;
+    max-width: 100%;
+}
+
+.triangles{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.triangle1{
+    width: 0;
+    height: 0;
+    border-top: 30px solid rgb(7, 114, 185);   /* Üst kenar renkli */
+    border-left: 30px solid transparent;  /* Sol kenar şeffaf */
+    
+}
+
+.triangle2{
+    width: 0;
+    height: 0;
+    border-top: 30px solid rgb(7, 114, 185);   /* Üst kenar renkli */
+    border-right: 30px solid transparent;  /* Sağ kenar şeffaf */
+    
+
+}
+
+.review-container h1{
+    font-size: 25px;
+    color: var(--main-color);
+    font-weight: 1000;
+}
+
+.review-container > p{
+    font-weight: bold;
+
+}
+
+/*Mobil*/
+
+@media(max-width:576px){
+    .review-items-container{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+    }
+    
+}

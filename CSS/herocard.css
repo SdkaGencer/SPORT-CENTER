@@ -1,0 +1,168 @@
+.hero {
+   
+    background-image: url(..//images/hero-man.jpg);
+    background-size: cover; /* resmin tüm genişliği kaplamasını sağlar*/
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height:auto;
+    padding:150px 14% 70px;
+    
+}
+
+.hero-container{ 
+    color: white; /*içeriklerimin rengini beyaz yaptım*/ /*tek tek çocuklara uygulamak yerine ebeveyne uyguladım*/ 
+}
+  
+.hero-container p:first-child {   /*Burda ilk çocuk p tagını seçtik*/
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 3px; /*kenarları yuvarladık*/
+    background-color:var(--main-color);
+    display:inline-block;
+    padding:6px;
+    margin: 5px;
+}
+
+.hero-container h1{
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.line-break { /*Herocard'taki büyük yazıyı alt alta yazmak için */
+    display: block; /* Her kelimeyi yeni bir satıra geçirir */ 
+}
+
+.hero-container p.text{ 
+    background-color: rgba(0, 0, 0, 0.5); /*transparan bir siyah arkaplan verdik*/
+    font-weight: bold;
+    
+}
+
+.hero-btn {
+    display: flex;
+    gap:40px;
+    margin-top: 10px;
+}
+
+.hero-btn button:hover{
+    all:unset;
+    cursor:pointer; /*Tıklanabilir*/
+}
+
+
+.hero-btn button:first-child{
+    color:white;
+    background-color:var(--main-color);
+    font-weight: bold;
+    padding:8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero-btn button:last-child{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border:1px solid white;
+    padding:8px;
+    border-radius: 6px;
+}
+
+/*Hero Bottom Part*/
+
+.hero-bottom-box-container{
+    background-color:var(--second-bg-color);
+    display: flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.bottom-box{
+    background-color: white;
+    text-align: center;
+    width:10px;
+    margin:20px 10px;
+    padding: 10px 5px;
+    flex: 0 1 15%; /*sırasıyla büyüme, küçül, tüm kutucukları %10 genişlikte olsun dedim*/
+}
+
+.bottom-box h4{
+    color:var(--main-color);
+    font-weight: 900;
+    font-size:large;
+    margin-bottom: 10px;
+    
+}
+.bottom-box p{
+    color: black;
+    font-weight: 800;
+}
+
+/*Mobil için responsive tasarım*/
+
+@media(max-width:576px){
+
+    .hero{
+        padding:75px 3% 15px;
+    
+    }
+    
+    .hero-container p:first-child {   /*Burda ilk çocuk p tagını seçtik*/
+        
+        font-size: 12px;
+        padding:5px;
+        margin: 2.5px;
+    }
+    
+    .hero-container h1{
+        font-weight: bold;
+        font-size: 32px;
+    }
+    
+    .hero-container p.text{ 
+        font-size: 8px;
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+
+    }
+    
+    .hero-btn {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        margin-top: 10px;
+    }
+
+    .hero-btn button{
+        text-align: start;
+    }
+    
+    .hero-bottom-box-container{
+        display: flex;
+        flex-direction: column;
+        gap:2px;
+        align-items: center;
+        background-color: var(--second-bg-color);
+    }
+    
+    
+    .bottom-box{
+        background-color: white;
+        text-align: center;
+        width:50%;
+        padding: 10px 5px;
+    
+    }
+
+   
+
+
+}

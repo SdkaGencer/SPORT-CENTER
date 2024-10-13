@@ -1,0 +1,247 @@
+.our-classes{
+    position: relative;
+    width:100%;
+    height:auto;
+    background: linear-gradient(75deg, var(--main-bg-color) 50%, var(--third-bg-color) 50%); /*Arka planın çapraz şekilde iki ayrı renk*/
+    padding-inline: 10%;/*BU şekilde yatayda boşluk vererek içeriği ortaya çektim*/
+    padding-top: 50px;
+}
+
+.our-classes-container{
+   display:flex;
+   flex-direction: column;
+}
+
+
+#classes-title{
+    font-weight:1000;
+    text-align: center;;
+    font-size: 25px;
+    color:var(--main-color);
+}
+
+div.underline{
+    width:30px;
+    height:5px;
+    text-align: center;
+    border:1px solid var(--second-color);
+    border-radius: 2px;
+    background-color: var(--second-color);
+    margin: 20px auto; /*ortaladım*/
+}
+ .btn-container{  /*Alt üsttekiler arası boşluğu ayarlayamıyorum*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    margin-top:20px;  
+   
+ }
+
+ .class-btn{
+    color:white;
+    font-weight: bold;
+    background-color: var(--main-color);
+    padding:10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    
+ }
+
+ /* Tıklanan butona altına ok eklemek için */
+.class-btn.active {
+    position:relative;
+    background-color:var(--second-color);
+  }
+  
+  .class-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Butonun altına yerleştirir */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Üçgenin sol kenarı */
+    border-right: 10px solid transparent; /* Üçgenin sağ kenarı */
+    border-top: 10px solid var(--second-color); /* Üçgenin üst kenarı */
+    transition: background-color 0.5s ease;
+} 
+
+  /*Classes Infos*/
+ .class-info{  /*container bu*/
+    display:flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 20px; 
+    
+
+ }
+
+ .info-img-div{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 200px; /* Kapsayıcı divin yüksekliği */
+    
+ }
+
+ .info-img{
+    max-width: 100%; /* Resmin kapsayıcıya sığmasını sağlar */
+    max-height: 100%; 
+}
+.info-text-container{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    width:50%;
+    margin: 0 10px; 
+    padding: 20px; 
+}
+
+.info-text h5{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color:rgb(65, 62, 62);
+}
+ul.classes-times{
+    list-style-type: none;
+}
+
+ul.classes-times li{
+    margin-bottom: 15px;
+}
+
+/*BMI Calculator Styling Beginning*/
+
+.bmi-container{
+    display:flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding:20px 200px; 
+    margin-top: 50px;
+}
+
+.bmi-text{
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    width:50%;
+}
+
+.bmi-text h3{
+    color:var(--main-color);
+    font-size: 30px;
+    font-weight: 1000;
+    margin-left:10px;
+}
+
+.bmi-text p{
+    font-weight: bold;
+    margin:10px;
+}
+
+.bmi-calculator {
+    margin-bottom: 20px; /* Hesaplayıcı ile fotoğraf arasındaki boşluk */
+}
+
+.image-container {
+    position: relative; /* Ok işaretinin fotoğrafın üzerinde konumlanabilmesi için */
+    display: inline-block; /* Fotoğrafın çevresinde boşluk olmaması için */
+}
+
+.target-image {
+    display: block;
+    width: 100%; /* Resmin genişliği */
+    height: auto; /* Boyutunu korur */
+}
+
+/* Ok işareti */
+.arrow-up {
+    position: absolute; /* Fotoğraf üzerinde hareket edebilmesi için mutlak konumlandırma */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid var(--second-color); /* Ok işareti rengi */
+    top: 100%; /* Başlangıç pozisyonu */
+    left: 85%; /* Başlangıç pozisyonu */
+    transform: translate(-50%, -50%); /* Ortalamak için */
+    z-index: 10; /* Fotoğrafın üzerinde kalmasını sağlamak için */
+    transition: all 0.5s ease-in-out; /* Hareketin yumuşak olması için */
+}
+
+/**/
+
+.index-img-div{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    width:50%;
+    margin: 0 10px; 
+    padding: 20px;
+}
+
+
+.index-img-div p{
+    color:black;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+}
+
+
+@media (max-width:576px){
+
+    /*Dersler:*/
+    .btn-container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-wrap:wrap;
+        gap:140px;
+    }  
+
+    .class-info{  
+       flex-direction: column;
+        align-items: center; 
+        padding:5px 0; 
+    }
+
+    .info-text-container{
+        gap:12px;
+        width:100%;
+        margin:0; 
+        padding: 20px; 
+    }
+
+    /*IBM Calculator*/
+
+    .bmi-container{
+        display:flex;
+        flex-direction: column;
+        align-items: center; 
+        gap:30px;
+        padding:10px;
+    }
+
+   .bmi-text{
+        gap:0px;
+        width:100%;
+        margin:0; 
+    }
+    #bmi-form{
+        display:flex;
+        flex-direction: column;
+        gap:1px;
+    }
+
+    .index-img-div{
+        width:100%;
+        margin: 0 5px; 
+        padding: 5px;
+    }
+
+}
